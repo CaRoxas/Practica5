@@ -8,9 +8,17 @@ public class Enemigo : MonoBehaviour
 {
     NavMeshAgent agent;
     public Transform premio;
+    public GameObject balas;
+    Rigidbody rb;
+    public int vida = 3;
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        premio = GameObject.Find("Base").transform;
+        // GameObject premioObjeto = GameObject.Find("Base")
+        // premio = premoiObjeto.transform
+
         agent = GetComponent<NavMeshAgent>();
         agent.destination = premio.position; 
     }
@@ -19,5 +27,18 @@ public class Enemigo : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Bala")
+        {
+            vida = vida - 1;
+            Destroy(collision.gameObject);
+            Debug.Log(gameObject.tag);
+        }
+        else if (vida == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
