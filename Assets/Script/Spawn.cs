@@ -41,7 +41,7 @@ public class Spawn : MonoBehaviour
         //El 50 es la posición de Z pero sin ningún rango sino en línea recta (si quisieramos un rango tendríamos que hacer como el posx pero en Z) 
         comienzo = new Vector3(posx, 0, 50);
         GameObject bloqueXana = GameObject.Instantiate(bixo, comienzo, Quaternion.identity);
-        tiempo = 2f;
+        tiempo = 15f;
         transcurso = true;
         
     }

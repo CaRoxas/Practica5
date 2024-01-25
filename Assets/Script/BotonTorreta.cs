@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Torreta : MonoBehaviour
+public class BotonTorreta : MonoBehaviour
 {
     public GameObject arma;
     bool activado = false;
+
+    public Dinero billetera;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class Torreta : MonoBehaviour
     }
     public void BotoncitoTorreta()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && billetera.dinero >= 30)
         {
             Ray lugarpointed = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit torretita;
@@ -39,6 +41,7 @@ public class Torreta : MonoBehaviour
                 if (torretita.collider.gameObject.tag == "Suelo")
                 {
                     GameObject.Instantiate(arma, torretita.point, Quaternion.identity);
+                    billetera.quitarDinero();
                 }
             }
         }

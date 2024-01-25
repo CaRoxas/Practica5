@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4131972195051642147}
   m_Layer: 0
   m_Name: Torreta
-  m_TagString: Untagged
+  m_TagString: Torreta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 7090727355919569141}
   m_Layer: 0
   m_Name: Torreta
-  m_TagString: Untagged
+  m_TagString: Torreta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

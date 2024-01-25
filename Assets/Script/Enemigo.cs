@@ -28,17 +28,17 @@ public class Enemigo : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Bala")
+        if (collision.gameObject.tag == "Balas")
         {
             vida = vida - 1;
             Destroy(collision.gameObject);
             Debug.Log(gameObject.tag);
-        }
-        else if (vida == 0)
-        {
-            Destroy(this.gameObject);
+            if (vida == 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
