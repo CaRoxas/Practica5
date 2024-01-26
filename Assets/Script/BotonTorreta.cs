@@ -41,7 +41,7 @@ public class BotonTorreta : MonoBehaviour
                 if (torretita.collider.gameObject.tag == "Suelo")
                 {
                     GameObject.Instantiate(arma, torretita.point, Quaternion.identity);
-                    billetera.quitarDinero();
+                    billetera.quitarDineroTorreta();
                 }
             }
         }

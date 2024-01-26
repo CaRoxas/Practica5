@@ -22,8 +22,12 @@ public class Dinero : MonoBehaviour
         textoDinero.text = "X" + dinero;
     }
 
-    public void quitarDinero()
+    public void quitarDineroTorreta()
     {
         dinero = dinero - 30;
+    }
+    public void quitarDineroValla()
+    {
+        dinero = dinero - 10;
     }
 }

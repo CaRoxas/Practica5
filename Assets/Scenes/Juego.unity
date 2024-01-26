@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 234936869}
   - component: {fileID: 234936871}
   - component: {fileID: 234936870}
+  - component: {fileID: 234936872}
   m_Layer: 5
   m_Name: Monedas
   m_TagString: Untagged
@@ -256,6 +257,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234936868}
   m_CullTransparentMesh: 1
+--- !u!114 &234936872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234936868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6969cf2e86462e54d9f1db210527aae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoDinero: {fileID: 1271931115}
+  dinero: 30
 --- !u!1 &427869327
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +512,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -605,7 +621,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arma: {fileID: 3970435373519358286, guid: b6953bf14bac3424f8637ae806bf9b2c, type: 3}
-  billetera: {fileID: 0}
+  billetera: {fileID: 1186077300}
+--- !u!114 &963194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419c0aa7989c8ff449d94dba973d2a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defensa: {fileID: 4130970345712785401, guid: 3e2a9b73089cd1b438a1ada5409a4e59, type: 3}
+  billetera: {fileID: 1186077300}
 --- !u!1 &998490815
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +965,7 @@ GameObject:
   - component: {fileID: 1312501662}
   - component: {fileID: 1312501664}
   - component: {fileID: 1312501663}
+  - component: {fileID: 1312501665}
   m_Layer: 5
   m_Name: Tiempo
   m_TagString: Untagged
@@ -981,7 +1012,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00:01
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1058,6 +1089,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312501661}
   m_CullTransparentMesh: 1
+--- !u!114 &1312501665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312501661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd9abf87e7ada546831101b4914482e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texto: {fileID: 1312501663}
 --- !u!1 &1331655883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,6 +1845,7 @@ GameObject:
   - component: {fileID: 1908584098}
   - component: {fileID: 1908584097}
   - component: {fileID: 1908584096}
+  - component: {fileID: 1908584099}
   m_Layer: 5
   m_Name: BotonVallas
   m_TagString: Untagged
@@ -1872,7 +1917,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1908584097}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1908584099}
+        m_TargetAssemblyTypeName: BotonValla, Assembly-CSharp
+        m_MethodName: BotonEncendido
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1908584097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1911,6 +1968,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908584094}
   m_CullTransparentMesh: 1
+--- !u!114 &1908584099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908584094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419c0aa7989c8ff449d94dba973d2a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defensa: {fileID: 4130970345712785401, guid: 3e2a9b73089cd1b438a1ada5409a4e59, type: 3}
+  billetera: {fileID: 1186077300}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

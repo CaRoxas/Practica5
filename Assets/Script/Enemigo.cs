@@ -16,9 +16,6 @@ public class Enemigo : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         premio = GameObject.Find("Base").transform;
-        // GameObject premioObjeto = GameObject.Find("Base")
-        // premio = premoiObjeto.transform
-
         agent = GetComponent<NavMeshAgent>();
         agent.destination = premio.position; 
     }
