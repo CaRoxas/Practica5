@@ -11,6 +11,7 @@ public class Enemigo : MonoBehaviour
     public GameObject balas;
     Rigidbody rb;
     public int vida = 3;
+    public Dinero billetera;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class Enemigo : MonoBehaviour
         if (collision.gameObject.tag == "Balas")
         {
             vida = vida - 1;
+            billetera.añadirDinero();
             Destroy(collision.gameObject);
             Debug.Log(gameObject.tag);
             if (vida == 0)

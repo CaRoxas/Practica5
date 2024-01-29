@@ -42,7 +42,6 @@ public class BotonValla : MonoBehaviour
                 {
                     GameObject.Instantiate(defensa, vallita.point, Quaternion.identity);
                     billetera.quitarDineroValla();
-                    contador.desaparecerValla();
                 }
             }
         }
