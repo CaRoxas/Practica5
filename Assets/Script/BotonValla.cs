@@ -6,8 +6,8 @@ public class BotonValla : MonoBehaviour
 {
     public GameObject defensa;
     bool activado = false;
-
     public Dinero billetera;
+    public Contador contador;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +42,7 @@ public class BotonValla : MonoBehaviour
                 {
                     GameObject.Instantiate(defensa, vallita.point, Quaternion.identity);
                     billetera.quitarDineroValla();
+                    contador.desaparecerValla();
                 }
             }
         }

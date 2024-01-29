@@ -636,6 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defensa: {fileID: 4130970345712785401, guid: 3e2a9b73089cd1b438a1ada5409a4e59, type: 3}
   billetera: {fileID: 1186077300}
+  contador: {fileID: 0}
 --- !u!1 &998490815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,6 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1312501663}
+  valla: {fileID: 4130970345712785401, guid: 3e2a9b73089cd1b438a1ada5409a4e59, type: 3}
 --- !u!1 &1331655883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +1984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defensa: {fileID: 4130970345712785401, guid: 3e2a9b73089cd1b438a1ada5409a4e59, type: 3}
   billetera: {fileID: 1186077300}
+  contador: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

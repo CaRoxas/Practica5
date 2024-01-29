@@ -7,7 +7,6 @@ using System;
 public class Dinero : MonoBehaviour
 {
     public TMP_Text textoDinero;
-
     public int dinero = 30;
 
     // Start is called before the first frame update
@@ -29,5 +28,9 @@ public class Dinero : MonoBehaviour
     public void quitarDineroValla()
     {
         dinero = dinero - 10;
+    }
+    public void añadirDinero()
+    {
+        dinero = dinero + 10;
     }
 }
