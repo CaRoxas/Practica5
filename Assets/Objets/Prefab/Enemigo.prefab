@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4118624109719480451}
   - component: {fileID: -200898395143605475}
   - component: {fileID: 6003344634073079026}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,9 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128601d7cf76702419aa2d6f67a08d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  premio: {fileID: 0}
+  premio: {fileID: 4737229875091375320, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
   balas: {fileID: 5938084898576348583, guid: 1193d1c6c3489c843be17f4deff70c58, type: 3}
   vida: 3
+  billetera: {fileID: 0}
 --- !u!195 &4118624109719480451
 NavMeshAgent:
   m_ObjectHideFlags: 0
