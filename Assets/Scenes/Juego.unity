@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoDinero: {fileID: 1271931115}
-  dinero: 30
+  dinero: 800
 --- !u!1 &427869327
 GameObject:
   m_ObjectHideFlags: 0

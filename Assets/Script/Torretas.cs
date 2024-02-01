@@ -5,7 +5,7 @@ using UnityEngine;
 public class Torretas : MonoBehaviour
 {
     public GameObject municion;
-    public int radio = 5;
+    public int radio = 8;
     public int velocidad;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class Torretas : MonoBehaviour
             // instanciar la bala en el punto de tiro
             Vector3 cañon = new Vector3 (0, 1, 1);
             GameObject.Instantiate(municion, cañon, Quaternion.identity);
-            // addForce Vectgor3.forward
+            // addForce Vector3.forward
 
 
 
