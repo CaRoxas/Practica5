@@ -133,15 +133,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4737229875091375320, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 539.8743
+      value: 541.43
       objectReference: {fileID: 0}
     - target: {fileID: 4737229875091375320, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0321028
+      value: 4.24
       objectReference: {fileID: 0}
     - target: {fileID: 4737229875091375320, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.6212769
+      value: 3.09
       objectReference: {fileID: 0}
     - target: {fileID: 4737229875091375320, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -174,6 +174,34 @@ PrefabInstance:
     - target: {fileID: 6422111264303183150, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
       propertyPath: m_Name
       value: Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422111264303183150, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448484359755216113, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
+      propertyPath: vidaBase
+      value: 
+      objectReference: {fileID: 384998237}
+    - target: {fileID: 8934887198966654676, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934887198966654676, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
+      propertyPath: m_Range
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934887198966654676, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
+      propertyPath: m_Intensity
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934887198966654676, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934887198966654676, guid: f95be3387a32c7241b8524dc1c6db8c5, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -307,7 +335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: -186}
+  m_AnchoredPosition: {x: -183.5, y: -181.1}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384998237
@@ -355,9 +383,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 790059996}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
-  m_WholeNumbers: 0
-  m_Value: 10
+  m_MaxValue: 20
+  m_WholeNumbers: 1
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2146,7 +2174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccfb704cff765bb4593c186489d0f115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arma: {fileID: 3970435373519358286, guid: b6953bf14bac3424f8637ae806bf9b2c, type: 3}
+  arma: {fileID: 7288987126998952437, guid: 14602947d20d08446ba13f9f913ac1e4, type: 3}
   billetera: {fileID: 1186077300}
 --- !u!1 &1881476339
 GameObject:
@@ -2198,7 +2226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6509434, g: 0.08896411, b: 0.04605731, a: 1}
+  m_Color: {r: 0.7735849, g: 0.11311854, b: 0.14478524, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
