@@ -6,7 +6,6 @@ public class BotonTorreta : MonoBehaviour
 {
     public GameObject arma;
     bool activado = false;
-
     public Dinero billetera;
     // Start is called before the first frame update
     void Start()

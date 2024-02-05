@@ -25,25 +25,25 @@ public class Torretas : MonoBehaviour
         if(tiempo <= 0)
         {
             Collider[] listaChoques;
-        listaChoques = Physics.OverlapSphere(this.transform.position, radio, 1 << 3);
-         Debug.Log(listaChoques.Length);
-        foreach (Collider enemigo in listaChoques)
-        {
+            listaChoques = Physics.OverlapSphere(this.transform.position, radio, 1 << 3);
+            Debug.Log(listaChoques.Length);
+            foreach (Collider enemigo in listaChoques)
+            {
                 Debug.Log(enemigo.gameObject.name);
            // transform.LookAt(enemigo.transform.position);
             // TODO: ROTAR EN EL EJE Z
 
-            GameObject municionClon = GameObject.Instantiate(municion, cañon, Quaternion.identity);
+                GameObject municionClon = GameObject.Instantiate(municion, cañon, Quaternion.identity);
             // addForce Vector3.forward
 
 
             // a dicha bala aplicarle una fuerza, hacia donde este el enemigo
-            municionClon.GetComponent<Rigidbody>().AddForce(Vector3.forward * fuerza, ForceMode.Acceleration);
+                municionClon.GetComponent<Rigidbody>().AddForce(Vector3.forward * fuerza, ForceMode.Acceleration);
 
-            tiempo = 1f;
+                tiempo = 1f;
 
             // ver cuantas balas se han disparado
-        }
+            }
         }
         else
         {
