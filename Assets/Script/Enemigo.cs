@@ -10,7 +10,7 @@ public class Enemigo : MonoBehaviour
     public Transform premio;
     public GameObject balas;
     Rigidbody rb;
-    public int vida = 3;
+    public int vida = 2;
     public Dinero billetera;
     // Start is called before the first frame update
     void Start()

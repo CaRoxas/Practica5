@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
+using static UnityEngine.GraphicsBuffer;
 
 public class Torretas : MonoBehaviour
 {
@@ -11,12 +12,11 @@ public class Torretas : MonoBehaviour
     public int velocidad;
     Vector3 cañon;
     float tiempo = 0f;
-    public float fuerza = 100f;
+    public float fuerza = 250f;
     // Start is called before the first frame update
     void Start()
     {
         cañon = this.GetComponentInChildren<Transform>().position;
-        Debug.Log(cañon);
     }
 
     // Update is called once per frame
@@ -29,18 +29,15 @@ public class Torretas : MonoBehaviour
             Debug.Log(listaChoques.Length);
             foreach (Collider enemigo in listaChoques)
             {
-                Debug.Log(enemigo.gameObject.name);
-           // transform.LookAt(enemigo.transform.position);
-            // TODO: ROTAR EN EL EJE Z
+                // transform.LookAt(enemigo.transform.position);
+                Vector3 relativePos = enemigo.transform.position - transform.position;
+                Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+                transform.rotation = rotation;
 
                 GameObject municionClon = GameObject.Instantiate(municion, cañon, Quaternion.identity);
-            // addForce Vector3.forward
+                municionClon.GetComponent<Rigidbody>().AddForce(relativePos * fuerza, ForceMode.Impulse);
 
-
-            // a dicha bala aplicarle una fuerza, hacia donde este el enemigo
-                municionClon.GetComponent<Rigidbody>().AddForce(Vector3.forward * fuerza, ForceMode.Acceleration);
-
-                tiempo = 1f;
+                tiempo = 0.5f;
 
             // ver cuantas balas se han disparado
             }
@@ -54,5 +51,7 @@ public class Torretas : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, radio);
+        Gizmos.color = Color.yellow;    
+        Gizmos.DrawRay(new Ray(transform.position,cañon  * 100));
     }
 }
