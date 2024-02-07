@@ -34,7 +34,6 @@ public class Enemigo : MonoBehaviour
             vida = vida - 1;
             billetera.añadirDinero();
             Destroy(collision.gameObject);
-            Debug.Log(gameObject.tag);
             if (vida == 0)
             {
                 Destroy(this.gameObject);

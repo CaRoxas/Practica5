@@ -8,6 +8,8 @@ public class Base : MonoBehaviour
 {
     public int daño = 20;
     public Slider vidaBase;
+    public Contador ContadorTiempo;
+    public GameObject Perdedor;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,11 @@ public class Base : MonoBehaviour
     {
         //El value se tiene que cambiar también en el slider de unity para que se aplique el daño
         vidaBase.GetComponent<Slider>().value = daño;
+        if (vidaBase.GetComponent<Slider>().value == 0)
+        {
+            ContadorTiempo.PauseGame();
+            Perdedor.SetActive(true);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -28,4 +35,5 @@ public class Base : MonoBehaviour
             daño = daño - 5;
         }
     }
+
 }

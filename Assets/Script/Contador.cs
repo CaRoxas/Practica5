@@ -10,6 +10,7 @@ public class Contador : MonoBehaviour
     float tiempo = 300f;
     int minutos, segundos;
     public GameObject valla;
+    public GameObject Ganador;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,10 @@ public class Contador : MonoBehaviour
         minutos = (int)(tiempo / 60f);
         segundos = (int)(tiempo - minutos * 60f);
         texto.text = string.Format("{0}:{1}", minutos, segundos);
+        if (tiempo == 0)
+        {
+            Ganador.SetActive(true);
+        }
     }
     public void desaparecerValla()
     {
@@ -30,5 +35,9 @@ public class Contador : MonoBehaviour
         {
             Destroy(valla);
         }
+    }
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
     }
 }
