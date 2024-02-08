@@ -7,6 +7,7 @@ public class BotonTorreta : MonoBehaviour
     public GameObject arma;
     bool activado = false;
     public Dinero billetera;
+    public BotonValla botonValla;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,13 @@ public class BotonTorreta : MonoBehaviour
         if (activado == false)
         {
             activado = true;
+            botonValla.Desactivar();
         }
+    }
+
+    public void Desactivar()
+    {
+        activado = false;
     }
     public void BotoncitoTorreta()
     {
@@ -35,6 +42,7 @@ public class BotonTorreta : MonoBehaviour
             Ray lugarpointed = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit torretita;
             int mascara = LayerMask.GetMask("Terrain");
+            activado = true;
             if(Physics.Raycast(lugarpointed, out torretita, Mathf.Infinity, mascara))
             {
                 if (torretita.collider.gameObject.tag == "Suelo")

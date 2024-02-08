@@ -8,6 +8,7 @@ public class BotonValla : MonoBehaviour
     bool activado = false;
     public Dinero billetera;
     public Contador contador;
+    public BotonTorreta botonTorreta;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,12 @@ public class BotonValla : MonoBehaviour
         if (activado == false)
         {
             activado = true;
+            botonTorreta.Desactivar();
         }
+    }
+    public void Desactivar()
+    {
+        activado = false;
     }
     public void BotoncitoValla()
     {

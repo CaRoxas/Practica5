@@ -38,14 +38,16 @@ public class Torretas : MonoBehaviour
                 municionClon.GetComponent<Rigidbody>().AddForce(relativePos * fuerza, ForceMode.Impulse);
 
                 tiempo = 0.5f;
-
-            // ver cuantas balas se han disparado
             }
         }
         else
         {
             tiempo = tiempo - Time.deltaTime;
         }
+        /*/if (tiempo == 2f)
+        {
+            Destroy(gameObject);
+        }*/
     }
 
     private void OnDrawGizmos()

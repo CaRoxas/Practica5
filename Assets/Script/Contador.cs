@@ -40,4 +40,8 @@ public class Contador : MonoBehaviour
     {
         Time.timeScale = 0;
     }
+    public void Restart()
+    {
+        Time.timeScale = 1;
+    }
 }

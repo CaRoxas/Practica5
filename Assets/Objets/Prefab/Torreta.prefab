@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270591240537806864}
   - component: {fileID: 9013177768329156898}
+  - component: {fileID: 6880195036643987526}
   m_Layer: 0
   m_Name: Torreta
   m_TagString: Torreta
@@ -81,6 +82,22 @@ MonoBehaviour:
   radio: 8
   velocidad: 2
   fuerza: 100
+--- !u!208 &6880195036643987526
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288987126998952437}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1, y: 0.5, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &179021025228568151
 PrefabInstance:
   m_ObjectHideFlags: 0

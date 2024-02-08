@@ -37,11 +37,11 @@ public class Spawn : MonoBehaviour
     void CargarBixo()
     {
         int posx = Random.Range(470, 590);
-        //La posx es el rango que le damos nosotras (que vaya de, en nuestro caso, 497 a 582)
+        //La posx es el rango que le damos nosotras (que vaya de, en nuestro caso, 470 a 590)
         //El 50 es la posición de Z pero sin ningún rango sino en línea recta (si quisieramos un rango tendríamos que hacer como el posx pero en Z) 
         comienzo = new Vector3(posx, 0, 50);
         GameObject bloqueXana = GameObject.Instantiate(bixo, comienzo, Quaternion.identity);
-        tiempo = 5f;
+        tiempo = 8f;
         transcurso = true;
         
     }

@@ -15,7 +15,7 @@ public class Valla : MonoBehaviour
     void Update()
     {
         tiempo = tiempo + Time.deltaTime;
-        if (tiempo >= 10f)
+        if (tiempo >= 5f)
         {
             Destroy(gameObject);
         }
