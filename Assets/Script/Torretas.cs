@@ -42,12 +42,12 @@ public class Torretas : MonoBehaviour
         }
         else
         {
-            tiempo = tiempo - Time.deltaTime;
+            tiempo = tiempo + Time.deltaTime;
         }
-        /*/if (tiempo == 2f)
+        if (tiempo >= 10f)
         {
             Destroy(gameObject);
-        }*/
+        }
     }
 
     private void OnDrawGizmos()
